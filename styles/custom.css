@@ -1,0 +1,255 @@
+<style type="text/css">
+
+.junk {
+}
+
+.namebox {
+    background: #eee;
+    padding:0.5em;
+    font-size: 75%;
+    line-height: 1.1;
+    border-radius:1em;
+    
+}
+.question {
+    padding: 1em;
+    border-radius:1em;
+    background: #f0f0f0;
+}
+.title {
+    font-size: 300%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    line-height: 1.0;
+    text-align:center;
+}
+
+.question pre, .answer {
+    padding: 1em;
+    margin: 1em;
+    border-radius:1em;
+    background: white ;
+}
+
+/*.question > h4 {
+    line-height: 1.5em;
+    font-size: 100%;
+}*/
+
+.solution:before {
+    content: "Solution";
+    font-size: 150%;
+    display: block;
+    margin-bottom: 1em;
+}
+
+
+div.question-text {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+body {
+    counter-reset:  question_counter points_counter;
+}
+.question:before {
+    counter-increment: question_counter;
+}
+
+.completeness:before {
+    content: "Question "counter(question_counter)" (Completeness)";
+    font-size: 150%;
+    display: block;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+.optional:before {
+    content: "Question "counter(question_counter)" (Optional)";
+    font-size: 150%;
+    display: block;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+
+h4 span.toc-item-num {
+    display: none;
+}
+
+
+
+
+.points-1:before {
+    counter-reset: points_counter 1;
+}
+.points-2:before {
+    counter-reset: points_counter 2;
+}
+.points-3:before {
+    counter-reset: points_counter 3;
+}
+.points-4:before {
+    counter-reset: points_counter 4;
+}
+.points-5:before {
+    counter-reset: points_counter 5;
+}
+.points-6:before {
+    counter-reset: points_counter 6;
+}
+.points-7:before {
+    counter-reset: points_counter 7;
+}
+.points-8:before {
+    counter-reset: points_counter 8;
+}
+.points-9:before {
+    counter-reset: points_counter 9;
+}
+.points-10:before {
+    counter-reset: points_counter 10;
+}
+
+.correctness:before {
+    content: "Question "counter(question_counter)" (Correctness - "counter(points_counter)"pts)";
+    font-size: 150%;
+    display: block;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+
+.solution ,._solution {
+    background: rgb(52 167 193 / 28%);
+    padding: 1em;
+}
+div.container{
+    width:95%;
+}
+
+code, .rendered_html code, .rendered_html pre, .rendered_html pre code  {
+    background-color:rgb(240 240 240);
+}
+
+div.sidebar {
+    float: right;
+    width: 30%;
+    padding: 1em;
+    margin: 1em;
+    background: lightgray;
+}
+
+div.sidebar div.title {
+    font-size: 150%;
+    font-weight: bold;
+    line-height: 1.0;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    margin-top:0.5em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.try-this, .code_cell .input_area, .question {
+    margin-top: 1em  !important;
+    margin-bottom: 1em  !important;
+    padding-left: 1em !important;
+}
+.question {
+    border-left-width : 2px !important;
+    border-left-color : red !important;
+    border-left-style : solid !important;
+    
+    border-right-width : 2px !important;
+    border-right-color : red !important;
+    border-right-style : solid !important;
+    
+}
+
+td, th {
+    border-width: 0.1px !important;
+    border-color: lightgray !important;
+    border-style:solid !important;
+    padding: .2em !important;
+}
+th {
+    text-align:center !important;
+}
+.rendered_html table
+{
+    margin-left: default !important;
+    margin-right: default !important;
+}
+.output_subarea
+{
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightgray;
+}
+
+.question code {
+
+}
+.question-header {
+    height:1em;
+    background:green;
+}
+.question-footer {
+    height:1em;
+    background:green;
+}
+
+.try-this-header {
+    min-height:1em;
+    background:yellow;
+}
+.try-this-footer {
+    min-height:1em;
+    background:yellow;
+}
+
+
+    
+/*    h1:before{
+        content: counter(h1_counter)" ";
+        counter-increment: h1_counter;
+    }
+    h1 {
+        counter-reset: h2_counter h3_counter h4_counter;
+    }
+    
+    h2:before{
+        content: counter(h1_counter)"."counter(h2_counter)" " !important;
+        counter-increment: h2_counter !important;
+    }
+    h2 {
+        counter-reset: h3_counter h4_counter;
+    }
+    h3:before{
+        content: counter(h1_counter)"."counter(h2_counter)"."counter(h3_counter)" ";
+        counter-increment: h3_counter;
+    }
+    h3 {
+        counter-reset: h4_counter;
+    }
+
+    h4:before{
+        counter-increment: h4_counter;
+        content: counter(h1_counter)"."counter(h2_counter)"."counter(h3_counter)"."counter(h4_counter)" ";
+    }
+*/
+    
+</style>
+
+<style type="text/css" media="print">
+.question
+{
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+</style>
